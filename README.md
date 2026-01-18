@@ -1,10 +1,10 @@
-# 🏂 Snowboard Game (Phaser + Next.js)
+# Snowboard Game (Phaser + Next.js)
 
 A 2D infinite-slope snowboarding prototype built with **Phaser 3** and **Next.js (TypeScript)**. The game includes carving, airtime, trick spins, obstacles, scoring, and a crash overlay UI with restart/menu buttons.
 
 ---
 
-## 🎯 Project Highlights
+## Project Highlights
 
 - Built a **2D snowboarding game prototype** using `Phaser 3` and `TypeScript`
 - Implemented **carving movement** with smooth acceleration + tilt feedback
@@ -27,7 +27,7 @@ A 2D infinite-slope snowboarding prototype built with **Phaser 3** and **Next.js
 
 ---
 
-## 🎮 Controls
+## Controls
 
 | Key | Action |
 |---|---|
@@ -39,7 +39,7 @@ A 2D infinite-slope snowboarding prototype built with **Phaser 3** and **Next.js
 
 ---
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 - Next.js (App Router)
 - TypeScript
@@ -47,25 +47,6 @@ A 2D infinite-slope snowboarding prototype built with **Phaser 3** and **Next.js
 - Vercel (deployment/hosting)
 
 ---
-
-## 📁 Project Structure
-
-src/
-  app/
-    page.tsx              # homepage
-    game/
-      page.tsx            # game page + Phaser canvas
-  game/
-    game.ts               # Phaser config + bootstrapping
-    scenes/
-      BootScene.ts
-      GameScene.ts
-    objects/
-      Player.ts
-    systems/
-      ScoreSystem.ts
-public/
-  assets/
 
 ## Setup & Installation
 
@@ -105,23 +86,16 @@ http://localhost:3000
 ## Next Steps (Ideas)
 
 - Rails + grinding mechanics
-
 - Combo multiplier system
-
 - More realistic terrain/slope generation
-
 - Touch controls for mobile
-
 - Leaderboard system (Vercel API routes + DB)
-
 - Art sprites, animations, sound effects
 
 ## Acknowledgements
 
 Built using:
 
-Phaser 3
-
-Next.js
-
-TypeScript
+-Phaser 3
+-Next.js
+-TypeScript
