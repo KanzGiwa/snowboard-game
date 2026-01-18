@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏂 Snowboard Game (Phaser + Next.js)
 
-## Getting Started
+A 2D infinite-slope snowboarding prototype built with **Phaser 3** and **Next.js (TypeScript)**. The game includes carving, airtime, trick spins, obstacles, scoring, and a crash overlay UI with restart/menu buttons.
 
-First, run the development server:
+---
 
-```bash
+## 🎯 Project Highlights
+
+- Built a **2D snowboarding game prototype** using `Phaser 3` and `TypeScript`
+- Implemented **carving movement** with smooth acceleration + tilt feedback
+- Added **jump pads** that launch the player into airtime and boost forward speed
+- Implemented **air tricks**
+  - Spin while airborne (`A` / `D`)
+  - Trick scoring based on rotation degrees
+  - Crash detection for bad landings (too much rotation on landing)
+- Added **random obstacle spawning** (collision → crash)
+- Created a scoring system tracking:
+  - Score
+  - Distance traveled
+  - Airtime
+  - Trick points
+- Crash overlay UI:
+  - Game pauses on crash
+  - Displays final score and distance
+  - Restart + Main Menu buttons
+  - Hover animations + click sound feedback (no audio files needed)
+
+---
+
+## 🎮 Controls
+
+| Key | Action |
+|---|---|
+| ← / → | Carve left / right |
+| ↑ | Hop (only while grounded) |
+| A / D | Spin while airborne |
+| Restart Button | Restart after crash |
+| Main Menu Button | Return to homepage |
+
+---
+
+## 🏗️ Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- Phaser 3
+- Vercel (deployment/hosting)
+
+---
+
+## 📁 Project Structure
+
+src/
+  app/
+    page.tsx              # homepage
+    game/
+      page.tsx            # game page + Phaser canvas
+  game/
+    game.ts               # Phaser config + bootstrapping
+    scenes/
+      BootScene.ts
+      GameScene.ts
+    objects/
+      Player.ts
+    systems/
+      ScoreSystem.ts
+public/
+  assets/
+
+## Setup & Installation
+
+Requirements:
+- Node.js 18+
+- npm
+
+1. Clone the repo
+git clone <your-repo-url>
+cd snowboard-game
+
+2) Install dependencies
+npm install
+
+## Run the Server (Local Development)
+
+Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Open in browser:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+## Current Features
 
-To learn more about Next.js, take a look at the following resources:
+- Infinite slope scrolling
+- Carving movement
+- Jump pads + airtime scoring
+- Trick spins + trick scoring
+- Obstacles + crash detection
+- Crash overlay pause screen
+- Restart + Main Menu buttons
+- Hover animations + click sound effects
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Next Steps (Ideas)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Rails + grinding mechanics
 
-## Deploy on Vercel
+- Combo multiplier system
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- More realistic terrain/slope generation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Touch controls for mobile
+
+- Leaderboard system (Vercel API routes + DB)
+
+- Art sprites, animations, sound effects
+
+## Acknowledgements
+
+Built using:
+
+Phaser 3
+
+Next.js
+
+TypeScript
